@@ -1,7 +1,6 @@
 # Tutorial: Update a specific user's information
 
-In this tutorial, you will learn the methods to call to
-change an existing user's information.
+In this tutorial, you will learn how to change an existing user's information.
 
 Expect this tutorial to take about 15 minutes to complete.
 
@@ -26,7 +25,7 @@ View a list of all your users
 1. On your desktop, open the Postman app.
 1. In the Postman app, create a new request with the values below.
     * **METHOD**: GET
-    * **URL**: `{{base_url}}/users`
+    * **URL**: `{base_url}/users`
     * **Headers**:
         * `Content-Type: application/json`
     * **Request body**:
@@ -66,8 +65,7 @@ View a list of all your users
 ```
 ## Update an existing user's information
 
-Use the ID property to make changes to a specific user's information. To do this, use the PUT method for {base_url}/users/{id}.
-
+To update information in an existing user's account, do the following:
 
 1. If your local service is not running, start it.
 
@@ -80,7 +78,7 @@ Use the ID property to make changes to a specific user's information. To do this
 1. On your desktop, open the Postman app. In this example, you will change the `first_name` of user 3 from "Marty" to "Maria".
 1. In the Postman app, create a new request with the values below.
     * **METHOD**: PUT
-    * **URL**: `{{base_url}}/users/3`
+    * **URL**: `{base_url}/users/3`
     * **Headers**:
         * `Content-Type: application/json`
     * **Request body**:
@@ -91,15 +89,14 @@ Use the ID property to make changes to a specific user's information. To do this
         "first_name": "Maria",
         "email": "m.martinez@example.com",
         "id": "3"
-    }
+       }
     ```
 
 1. In the Postman app, choose **Send** to make the request.
-1. The response body should show the updated `first_name` property for user 3, as in the output below.
+1. Congratulations! The response body should show the updated `first_name` property for user 3, as in the output below.
 
-  
 ```js
-[
+  [
    
     {
         "last_name": "Martinez",
@@ -109,8 +106,10 @@ Use the ID property to make changes to a specific user's information. To do this
         
     }
     
-]
+  ]
 ```
+
+## Next steps
 After doing this tutorial in Postman, you might like to repeat it in
 your favorite programming language. To do this, adapt the values from
 the tutorial to the properties and arguments that the language uses to
